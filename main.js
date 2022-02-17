@@ -60,7 +60,6 @@ async function renderContent({search, category, dateMin, dateMax, score, page}){
         movies = movies.filter(movie => {
             let date = movie.release_date 
             let year = date.substring(0,4)
-            console.log()
             return year >= +dateMin
         })
     }else if(dateMax){
@@ -148,7 +147,6 @@ prev.addEventListener("click", (e) => {
 
 next.addEventListener("click", (e) => {
     clearInputs()
-    console.log(pageStatus.dataset.search)
     if(pageStatus.textContent >= 1){
         renderContent({search: pageStatus.dataset.search ? pageStatus.dataset.search : "", category: defaultCategory, dateMin: "", dateMax: "", score: "", page: +(pageStatus.textContent) + 1})
         pageStatus.textContent = parseInt(pageStatus.textContent) + 1
