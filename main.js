@@ -1,6 +1,5 @@
-
 const append = document.querySelector(".append")
-let submitSearch = document.querySelector("#submitSearch")
+const submitSearch = document.querySelector("#submitSearch")
 const categorys = document.querySelector(".row2")
 
 const prev = document.querySelector(".prev")
